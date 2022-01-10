@@ -1,0 +1,29 @@
+# Run
+run:
+  SEED: 420
+  fast_run: false
+
+
+# Dataset
+dataset:
+  data_path: ../data/cifar-10-python/cifar-10-batches-py/
+  val_size: 0.1
+  batch_size: 256
+  num_workers: 0 # Shit windows
+
+
+# Model
+model:
+  class: vit # vit
+  model_name: vit
+
+
+# Train
+train:
+  device: cuda
+  fp16: false
+  optimizer: AdamW
+  lr: 3e-4
+  epochs: 700
+  save_path: ../artifacts/
+  save_name: model.pt
